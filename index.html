@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nguyễn Phúc Minh | Java Developer & Frontend React Intern</title>
+  <meta name="description" content="Portfolio of Nguyễn Phúc Minh - Software Engineering student at FPT University specializing in Java Web, Jakarta Servlet, and React.js development.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Nguyen Phuc Minh Portfolio Home">
+        <div class="brand-badge">PM</div>
+        <div class="brand-name">Phúc Minh<span>.dev</span></div>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle theme" title="Toggle Light/Dark Mode">
+          <i class="fa-solid fa-sun" id="themeIcon"></i>
+        </button>
+        <a href="contact.html" class="btn btn-primary btn-sm" style="display: none; @media(min-width: 640px){display: inline-flex;}">Hire Me</a>
+        <button class="menu-toggle-btn" id="menuToggleBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-greeting">
+            <i class="fa-solid fa-code"></i> Software Engineering Student @ FPT University
+          </div>
+          <h1 class="hero-title">
+            Hi, I'm <span class="highlight">Nguyễn Phúc Minh</span>
+          </h1>
+          <p class="hero-subtitle">
+            Aspiring <strong>Java Fresher/Intern</strong> and <strong>Frontend React Intern</strong>. Experienced in building responsive full-stack Java Web (JSP/Servlet) and modern React.js applications with clean architecture and RESTful APIs.
+          </p>
+
+          <div class="hero-roles">
+            <span class="role-chip"><i class="fa-brands fa-java"></i> Java 21 & Servlet</span>
+            <span class="role-chip"><i class="fa-brands fa-react"></i> React.js & Router</span>
+            <span class="role-chip"><i class="fa-solid fa-database"></i> SQL Server & JDBC</span>
+            <span class="role-chip"><i class="fa-solid fa-shield-halved"></i> MVC & RBAC</span>
+          </div>
+
+          <div class="hero-cta">
+            <a href="projects.html" class="btn btn-primary">
+              <i class="fa-solid fa-folder-open"></i> Explore Projects
+            </a>
+            <a href="contact.html" class="btn btn-secondary">
+              <i class="fa-regular fa-envelope"></i> Get In Touch
+            </a>
+            <a href="../NguyenPhucMinh_JavaDeveloper_ReactIntern.pdf" target="_blank" class="btn btn-secondary" title="View Full Resume PDF">
+              <i class="fa-regular fa-file-pdf"></i> View Resume
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="profile-card">
+            <div class="avatar-wrapper">
+              <img src="assets/profile.jpg" alt="Nguyễn Phúc Minh - Profile Photo" class="avatar-img">
+              <span class="avatar-status" title="Open for Intern & Fresher opportunities"></span>
+            </div>
+            <h2 class="profile-card-name">Nguyễn Phúc Minh</h2>
+            <p class="profile-card-role">Java Developer & React Intern</p>
+            
+            <div class="profile-card-meta">
+              <div class="meta-item">
+                <i class="fa-solid fa-building-columns"></i>
+                <span>FPT University (2023 – Present)</span>
+              </div>
+              <div class="meta-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Hanoi, Vietnam</span>
+              </div>
+              <div class="meta-item">
+                <i class="fa-regular fa-envelope"></i>
+                <span>nguyenphucminh286@gmail.com</span>
+              </div>
+              <div class="meta-item">
+                <i class="fa-brands fa-github"></i>
+                <a href="https://github.com/nguyenphucminh286-collab" target="_blank" rel="noopener noreferrer" style="color: var(--primary);">github.com/nguyenphucminh286-collab</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="container stats-grid">
+        <div class="stat-item">
+          <div class="stat-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div class="stat-info">
+            <h3>FPT Uni</h3>
+            <p>Software Engineering</p>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon"><i class="fa-solid fa-diagram-project"></i></div>
+          <div class="stat-info">
+            <h3>8+</h3>
+            <p>Completed Projects</p>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon"><i class="fa-solid fa-certificate"></i></div>
+          <div class="stat-info">
+            <h3>3</h3>
+            <p>Coursera Certifications</p>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon"><i class="fa-solid fa-language"></i></div>
+          <div class="stat-info">
+            <h3>B2</h3>
+            <p>English Proficiency</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Snapshot -->
+    <section class="container" style="margin-bottom: 5rem;">
+      <div class="section-header">
+        <span class="section-tag">Portfolio Highlights</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-desc">Key full-stack applications showcasing architecture design, database modeling, and frontend user experience.</p>
+      </div>
+
+      <div class="projects-grid" style="margin-bottom: 2rem;">
+        <!-- Featured Project 1 -->
+        <article class="project-card">
+          <div class="project-thumbnail">
+            <i class="fa-solid fa-shirt project-icon-placeholder"></i>
+            <span class="project-badge-overlay badge badge-primary">Featured Full-Stack</span>
+            <span class="project-timeline">Jun 2026 – Jul 2026</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Multi-Vendor Fashion E-commerce Platform (MVP Fashion)</h3>
+            <p class="project-desc">
+              Full-stack Seller Management Portal and Delivery module handling seller onboarding, shop configuration, and end-to-end order fulfillment.
+            </p>
+            <div class="project-tags">
+              <span class="tech-tag">Java 21</span>
+              <span class="tech-tag">Jakarta Servlet</span>
+              <span class="tech-tag">MS SQL Server</span>
+              <span class="tech-tag">Bootstrap 5</span>
+              <span class="tech-tag">Cloudinary</span>
+            </div>
+            <div class="project-footer">
+              <a href="projects.html" class="btn btn-secondary btn-sm">
+                <i class="fa-solid fa-circle-info"></i> View Details
+              </a>
+              <div class="project-links">
+                <a href="https://github.com/KhanhHoa286/SE2034-SWP391-G6" target="_blank" rel="noopener noreferrer" class="icon-btn" title="View Source on GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Featured Project 2 -->
+        <article class="project-card">
+          <div class="project-thumbnail">
+            <i class="fa-solid fa-cake-candles project-icon-placeholder"></i>
+            <span class="project-badge-overlay badge badge-primary">Featured React App</span>
+            <span class="project-timeline">2026 – Present</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">BakeryZone – E-Commerce Bakery Website</h3>
+            <p class="project-desc">
+              Dynamic e-commerce bakery platform with Customer and Admin role-based interfaces, category filtering, cart management, and delivery time-slot booking.
+            </p>
+            <div class="project-tags">
+              <span class="tech-tag">React.js</span>
+              <span class="tech-tag">React Router</span>
+              <span class="tech-tag">Context API</span>
+              <span class="tech-tag">Node.js REST</span>
+              <span class="tech-tag">Cloudinary</span>
+            </div>
+            <div class="project-footer">
+              <a href="projects.html" class="btn btn-secondary btn-sm">
+                <i class="fa-solid fa-circle-info"></i> View Details
+              </a>
+              <div class="project-links">
+                <a href="https://github.com/nguyenphucminh286-collab/FER_Project" target="_blank" rel="noopener noreferrer" class="icon-btn" title="View Source on GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div style="text-align: center;">
+        <a href="projects.html" class="btn btn-primary">
+          <span>Explore All Projects</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Quick Skillset Showcase -->
+    <section class="container" style="margin-bottom: 5rem;">
+      <div class="section-header">
+        <span class="section-tag">Tech Stack</span>
+        <h2 class="section-title">Core Competencies</h2>
+        <p class="section-desc">Technologies and development tools I actively work with across web development and software engineering.</p>
+      </div>
+
+      <div class="skills-container">
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <div class="skill-category-icon"><i class="fa-brands fa-java"></i></div>
+            <h3 class="skill-category-title">Backend & Java</h3>
+          </div>
+          <div class="skill-tags-list">
+            <span class="skill-pill">Java 21</span>
+            <span class="skill-pill">Jakarta Servlet</span>
+            <span class="skill-pill">JSP & JSTL</span>
+            <span class="skill-pill">DAO Pattern</span>
+            <span class="skill-pill">JDBC</span>
+            <span class="skill-pill">Node.js</span>
+          </div>
+        </div>
+
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <div class="skill-category-icon"><i class="fa-brands fa-react"></i></div>
+            <h3 class="skill-category-title">Frontend & UI</h3>
+          </div>
+          <div class="skill-tags-list">
+            <span class="skill-pill">React.js</span>
+            <span class="skill-pill">JavaScript ES6+</span>
+            <span class="skill-pill">HTML5 / CSS3</span>
+            <span class="skill-pill">React Router</span>
+            <span class="skill-pill">Context API</span>
+            <span class="skill-pill">Bootstrap 5</span>
+          </div>
+        </div>
+
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <div class="skill-category-icon"><i class="fa-solid fa-database"></i></div>
+            <h3 class="skill-category-title">Databases & Tools</h3>
+          </div>
+          <div class="skill-tags-list">
+            <span class="skill-pill">MS SQL Server</span>
+            <span class="skill-pill">Git & GitHub</span>
+            <span class="skill-pill">Cloudinary API</span>
+            <span class="skill-pill">Maven</span>
+            <span class="skill-pill">VS Code</span>
+            <span class="skill-pill">IntelliJ IDEA</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="container">
+      <div class="cta-banner">
+        <h2>Looking for a Dedicated Java / React Intern?</h2>
+        <p>I am eager to contribute to real-world engineering teams, learn from mentors, and build impactful software.</p>
+        <a href="contact.html" class="btn btn-primary">
+          <i class="fa-regular fa-paper-plane"></i> Let's Connect
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="brand-badge">PM</div>
+            <div class="brand-name">Phúc Minh<span>.dev</span></div>
+          </div>
+          <p>Software Engineering student at FPT University passionate about clean code, robust backend architectures, and delightful frontend experiences.</p>
+          <div class="footer-socials">
+            <a href="https://github.com/nguyenphucminh286-collab" target="_blank" rel="noopener noreferrer" class="icon-btn" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="mailto:nguyenphucminh286@gmail.com" class="icon-btn" title="Email">
+              <i class="fa-regular fa-envelope"></i>
+            </a>
+            <a href="tel:0332280605" class="icon-btn" title="Phone">
+              <i class="fa-solid fa-phone"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul class="footer-links">
+            <li><i class="fa-solid fa-location-dot" style="margin-right: 6px; color: var(--primary);"></i> Hanoi, Vietnam</li>
+            <li><i class="fa-regular fa-envelope" style="margin-right: 6px; color: var(--primary);"></i> nguyenphucminh286@gmail.com</li>
+            <li><i class="fa-solid fa-phone" style="margin-right: 6px; color: var(--primary);"></i> 0332280605</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Nguyễn Phúc Minh. All rights reserved.</p>
+        <p>Built with Semantic HTML5, Modern CSS Grid & Vanilla JS</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App Script -->
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Nguyễn Phúc Minh - Java & React Developer</title>
+  <meta name="description" content="Explore software engineering projects by Nguyễn Phúc Minh including full-stack Java Web applications, React Single Page Applications, and database systems.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Nguyen Phuc Minh Portfolio Home">
+        <div class="brand-badge">PM</div>
+        <div class="brand-name">Phúc Minh<span>.dev</span></div>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="projects.html" class="nav-link active">Projects</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle theme" title="Toggle Light/Dark Mode">
+          <i class="fa-solid fa-sun" id="themeIcon"></i>
+        </button>
+        <button class="menu-toggle-btn" id="menuToggleBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Page Header Banner -->
+    <section class="page-header">
+      <div class="container page-header-content">
+        <div class="page-breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i>
+          <span>Projects</span>
+        </div>
+        <h1 class="page-title">Projects & Portfolio</h1>
+        <p class="page-subtitle">A collection of full-stack Java web systems, React.js Single Page Applications, and software engineering coursework projects.</p>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="container">
+      <!-- Filter & Search Toolbar -->
+      <div class="projects-filter-bar">
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-category="all">
+            <i class="fa-solid fa-layer-group"></i> All Projects (3)
+          </button>
+          <button class="filter-btn" data-category="java">
+            <i class="fa-brands fa-java"></i> Java / Full-Stack (2)
+          </button>
+          <button class="filter-btn" data-category="react">
+            <i class="fa-brands fa-react"></i> React / Frontend (1)
+          </button>
+        </div>
+
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="projectSearchInput" placeholder="Search projects or technologies..." aria-label="Search projects">
+        </div>
+      </div>
+
+      <!-- Dynamic Projects CSS Grid -->
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- Project Detail Modal -->
+    <div class="modal-backdrop" id="projectModalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalProjectTitle">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <div>
+            <h3 class="modal-title" id="modalProjectTitle">Project Title</h3>
+            <span class="badge badge-primary" id="modalProjectBadge" style="margin-top: 0.35rem;">Category</span>
+          </div>
+          <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        
+        <div class="modal-body">
+          <div>
+            <h4 style="font-size: 1.05rem; margin-bottom: 0.5rem; color: var(--text-heading);">Overview</h4>
+            <p id="modalProjectDesc" style="color: var(--text-muted); line-height: 1.65;"></p>
+          </div>
+
+          <div>
+            <h4 style="font-size: 1.05rem; margin-bottom: 0.65rem; color: var(--text-heading);">Key Features & Architecture</h4>
+            <ul class="modal-highlights" id="modalProjectHighlights"></ul>
+          </div>
+
+          <div>
+            <h4 style="font-size: 1.05rem; margin-bottom: 0.65rem; color: var(--text-heading);">Technologies Used</h4>
+            <div class="project-tags" id="modalProjectTech"></div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-secondary btn-sm" onclick="closeProjectModal()">Close</button>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="modalGithubLink">
+            <i class="fa-brands fa-github"></i> View GitHub Repository
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="brand-badge">PM</div>
+            <div class="brand-name">Phúc Minh<span>.dev</span></div>
+          </div>
+          <p>Software Engineering student at FPT University passionate about clean code, robust backend architectures, and delightful frontend experiences.</p>
+          <div class="footer-socials">
+            <a href="https://github.com/nguyenphucminh286-collab" target="_blank" rel="noopener noreferrer" class="icon-btn" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="mailto:nguyenphucminh286@gmail.com" class="icon-btn" title="Email">
+              <i class="fa-regular fa-envelope"></i>
+            </a>
+            <a href="tel:0332280605" class="icon-btn" title="Phone">
+              <i class="fa-solid fa-phone"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul class="footer-links">
+            <li><i class="fa-solid fa-location-dot" style="margin-right: 6px; color: var(--primary);"></i> Hanoi, Vietnam</li>
+            <li><i class="fa-regular fa-envelope" style="margin-right: 6px; color: var(--primary);"></i> nguyenphucminh286@gmail.com</li>
+            <li><i class="fa-solid fa-phone" style="margin-right: 6px; color: var(--primary);"></i> 0332280605</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Nguyễn Phúc Minh. All rights reserved.</p>
+        <p>Built with Semantic HTML5, Modern CSS Grid & Vanilla JS</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App Script -->
+  <script src="app.js"></script>
+</body>
+</html>
